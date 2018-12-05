@@ -1,0 +1,58 @@
+body{
+    background-image: url("../images/texture.jpg");
+    background-repeat: space;
+}
+.page{
+    margin: 275px auto;
+}
+.loginblock{
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    background-color: rgb(202, 202, 202);
+    border-radius: 14px 0px 0px 14px;
+    padding: 10px 20px;
+}
+.registerblock{
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    background-color:#129CF3;
+    padding: 10px 20px;
+    border-radius: 0px 14px 14px 0px;
+}
+.Loginlabel,.Registerlabel{
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: 21px;
+}
+.usernameclass{
+    text-align: center;
+    border-radius: 8px;
+}
+.passwordclass{
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.paragraph{
+    font-size: 14px;
+}
+.hyperlink{
+    font-size: 10px;
+    float: right;
+    margin: 10px auto;
+}
+.btn-register{
+    background-color: white;
+    margin-bottom: 10px;
+    float: right;
+}
+.btn-register:hover {
+    background-color: orange;
+    transition-duration: 1s;
+}
+.btn-submit{
+    background-color: white;
+    margin-bottom: 10px;
+}
+.btn-submit:hover {
+    background-color: orange;
+    transition-duration: 1s;
+}

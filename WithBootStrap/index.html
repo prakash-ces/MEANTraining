@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login/ Register</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+</head>
+<body>
+    <div class="background">
+        <div class="row page">
+            <div class="col-md-3"></div>
+            <div class="col-md-3 loginblock">
+                <form onsubmit="feildcheck(this)">
+                <label class="Loginlabel">Login:</label><br />
+                <input type="text" name="username" class="usernameclass" id="usernameid" placeholder="Enter the username"/> <br />
+                <input type="password" name="password" class="passwordclass" id="passwordid" placeholder="Enter the password"/> <br />
+                <input class="btn btn-submit" type="submit" />
+                <a href="#" class="hyperlink">forgot password ?</a> 
+                </form>               
+            </div>
+            <div class="col-md-3 registerblock">
+                <label class="Registerlabel">Register:</label><br />
+                <p class="paragraph">If you are a new user, Please register here.....</p>
+                <button class="btn btn-register">Register</button>
+            </div>
+            <div class="col-md-3"></div>
+        </div>     
+    </div>    
+    <script src="scripts/scripts.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+</body>
+</html>
