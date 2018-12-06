@@ -6,21 +6,67 @@ embed,
 object {
 	outline: 0
 }
+.headingForLogin{
+	padding-top: 2px;
+}
 button::-moz-focus-inner {
 	border: 0
-}
-.border-black{
-    border: 1px solid #000;
-}
-.border-green{
-    border: 1px solid #0f0;
-}
-.border-blue{
-    border: 1px solid #00f;
 }
 .display-inline-block{
     display: inline-block;
 }
+body{
+	text-align: center;
+	margin-top: 10%;
+	margin-left: 30%;
+	margin-right: 30%;
+	}
+	legend{
+	float: left;
+	font-size: 16px;
+	}
+	P{
+	padding: 0px;
+	margin: 0 auto;
+	}
+#p1{
+	text-align: center;
+	margin-top: 60px;
+}
+.formblock{
+	padding: 10px;
+	flex: auto;
+	}
+.btn-register{
+	margin: 0 auto;
+}
+.username,.password,.btn-submit{
+	text-align: center;
+	margin-top: 5px;
+	}
+	
+.username{
+	margin-top: 15px;
+	}
+#divLoginContainer{
+box-shadow: 2px 5px 5px 5px #888888;
+}
+#divLoginBlock{
+text-align: center;
+background-color: rgb(255, 255, 255);
+}
+#divRegisterBlock{
+text-align: center;
+background-color: rgba(245, 0, 0, 0.37);
+}
+.btn-submit,.btn-register{
+	background-color:white;
+	}
+	.btn-submit:hover{
+	background-color: #129CF3;
+	transition-duration: 1s;
+	box-shadow: 0px 5px rgba(31,31,31,0.75);
+	} 
 
 @media (min-width:1281px) {
 	#divLoginContainer {
@@ -32,7 +78,7 @@ button::-moz-focus-inner {
     #divRegisterBlock{
 		width: 396px;
 		float: right;
-		height: 200px;
+		height: 163px;
     }
 }
 
@@ -46,7 +92,7 @@ button::-moz-focus-inner {
     #divRegisterBlock{
 		width: 296px;
 		float: right;
-		height: 200px;
+		height: 162px;
     }
 }
 
@@ -60,7 +106,7 @@ button::-moz-focus-inner {
     #divRegisterBlock{
 		width: 196px;
 		float: right;
-		height: 237px;
+		height: 200px;
     }
 }
 
@@ -74,7 +120,7 @@ button::-moz-focus-inner {
     #divRegisterBlock{
 		width: 196px;
 		float: right;
-		height: 237px;
+		height: 200px;
     }
 }
 
@@ -86,19 +132,21 @@ button::-moz-focus-inner {
         width: 100%;
     }
     #divRegisterBlock{
-        width: 100%;
+		width: 100%;
+		padding-bottom:20px;
     }
 }
 
 @media (min-width:320px) and (max-width:480px) {
 	#divLoginContainer {
-		width: 100%
+		width: 200px;
     }
     #divLoginBlock{
-        width: 100%;
+		width: 100%;
     }
     #divRegisterBlock{
-        width: 100%;
+		width: 100%;
+		padding-bottom: 5px;
     }
 }
 .fixed-footer {
@@ -107,7 +155,6 @@ button::-moz-focus-inner {
 	bottom: 10px;
 	left: 0;
 }
-
 .disable-select {
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -130,6 +177,15 @@ button::-moz-focus-inner {
 	background-image: url(squares.png);
 	background-repeat: repeat;
 	font-family: "Trebuchet MS", Helvetica, sans-serif
+} 
+/* .border-black{
+    background-color:rgb(0, 0, 0);
+}
+.border-green{
+    border: 1px solid rgb(0, 0, 0);
+}
+.border-blue{
+    border: 1px solid rgb(255, 255, 255);
 } 
 button {
 	cursor: pointer;
@@ -204,20 +260,6 @@ button:hover {
 	-ms-transition: opacity 350ms ease-in-out;
 	transition: opacity 350ms ease-in-out
 }
-body{
-text-align: center;
-margin-top: 25%;
-margin-left: 30%;
-margin-right: 30%;
-}
-legend{
-float: left;
-font-size: 16px;
-}
-P{
-padding: 0px;
-margin: 0 auto;
-}
 .loginblock{
 float:left;
 background-color: rgb(194, 194, 194);
@@ -227,24 +269,4 @@ height:100%;
 background-color:rgb(109, 97, 97);
 padding:52px 52px;
 height:100%;
-}
-.formblock{
-padding: 10px;
-flex: auto;
-}
-.username,.password,.btn-submit{
-text-align: center;
-margin-top: 5px;
-}
-.username{
-margin-top: 15px;
-}
-.btn-submit,.btn-register{
-background-color:white;
-}
-.btn-submit:hover{
-background-color: #129CF3;
-transition-duration: 1s;
-box-shadow: 0px 5px rgba(31,31,31,0.75);
-} 
-*/
+}*/
