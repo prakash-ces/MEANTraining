@@ -8,23 +8,12 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="divLoginContainer" class="border-black align-center">
-        <div id="divLoginBlock" class="border-green display-inline-block">
-            <form onsubmit="checkfunction(this)" class="formblock">
-                <legend id="headingForLogin">Login</legend><br />
-                <p>Username: <input id="usernameid" class="username" type="text" placeholder="UserName" /></p><br />
-                <p>Password: <input id="passwordid" class="password" type="password" placeholder="Password" /></p> <br />
-                <input id="submitbtnid" class="btn btn-submit" type="submit" />
-            </form>
-        </div>
-        <div id="divRegisterBlock" class="border-blue display-inline-block">
-            <p id="p1">If you are a new user, Please register here</p> <br />
-            <button class="btn btn-register" id="btnregister">Register</button>
-        </div>
-    </div>
+    <div id="divContent"></div>
     <footer class="fixed-footer text-center">
         Copyrights to CES Ltd.
     </footer>
-    <script src="js/script.js"></script>
+    <script src="scripts/globals.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/validations.js"></script>
 </body>
 </html>

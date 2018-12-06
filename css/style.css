@@ -16,35 +16,35 @@ button::-moz-focus-inner {
     display: inline-block;
 }
 body{
-	text-align: center;
-	margin-top: 10%;
-	margin-left: 30%;
-	margin-right: 30%;
-	}
-	legend{
-	float: left;
-	font-size: 16px;
-	}
-	P{
-	padding: 0px;
-	margin: 0 auto;
-	}
+text-align: center;
+margin-top: 10%;
+margin-left: 30%;
+margin-right: 30%;
+}
+legend{
+float: left;
+font-size: 16px;
+}
+P{
+padding: 0px;
+margin: 0 auto;
+}
 #p1{
-	text-align: center;
-	margin-top: 60px;
+text-align: center;
+margin-top: 60px;
 }
 .formblock{
-	padding: 10px;
-	flex: auto;
-	}
+padding: 10px;
+flex: auto;
+}
 .btn-register{
-	margin: 0 auto;
+margin: 0 auto;
 }
 .username,.password,.btn-submit{
-	text-align: center;
-	margin-top: 5px;
-	}
-	
+text-align: center;
+margin-top: 5px;
+}
+
 .username{
 	margin-top: 15px;
 	}
@@ -60,13 +60,21 @@ text-align: center;
 background-color: rgba(245, 0, 0, 0.37);
 }
 .btn-submit,.btn-register{
-	background-color:white;
-	}
-	.btn-submit:hover{
-	background-color: #129CF3;
-	transition-duration: 1s;
-	box-shadow: 0px 5px rgba(31,31,31,0.75);
-	} 
+background-color:white;
+}
+.btn-submit:hover{
+transition-duration: 1s;
+box-shadow: 0px 5px rgba(31,31,31,0.75);
+} 
+#divRegisterContainer{
+	box-shadow: 2px 5px 5px 5px #888888;
+}
+#headingForRegister{
+text-align: center;
+}
+#divContent{
+	width: 100%;
+}
 
 @media (min-width:1281px) {
 	#divLoginContainer {
@@ -150,26 +158,38 @@ background-color: rgba(245, 0, 0, 0.37);
     }
 }
 .fixed-footer {
-    width: 100%;
-	position: fixed;
-	bottom: 10px;
-	left: 0;
+width: 100%;
+position: fixed;
+bottom: 10px;
+left: 0;
 }
 .disable-select {
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none
 }
-
 .text-center {
-	text-align: center
+text-align: center
 }
-
 .align-center {
-	margin: auto
+margin: auto
 }
+/*--------------------------------------------register page css -------------------------------------*/
+#divRegisterBlockContainer{
+border: 1px solid black;
+background-color: rgba(245, 0, 0, 0.37);
+padding-bottom: 10px;
+}
+.headingForRegister{
 
+}
+.useremailid{
+margin-left: 50px;
+}
+#p2{
+margin-right: 53px;
+}
 /*-------------------------------------------back up ----------------------------------------------
  body {
 	height: 98%;
