@@ -1,71 +1,100 @@
-function checkfunction(form)
-{
-//initialising of variables
-var username = document.getElementById('usernameid').value;
-var password = document.getElementById('passwordid').value;
-var useremailid = document.getElementById('useremailid').value;
-var reenterpassword = document.getElementById('reenterpasswordid').value;
+function validateLoginForm() {
+        
+    // Initialising of variables from login page
+    var loginUserName = document.getElementById('inpLoginName').value;
+    var loginPassword = document.getElementById('inpPwdName').value;
 
-if(username == "") {
-    alert("Error: Username cannot be blank!");
-    return false;// checking for the empty feild
-}
-if(useremailid == ""){
-    alert("Error: User Email id cannot be blank!");
-    document.getElementById('useremailid').focus();
-    return false;// checking for the empty feild
+    if ( (validateUsername(loginUserName) == true) && (validatePwd(loginPassword) == true) ) {
+        return true;
+    } else {
+        return false;
+    }  // IF-ELSE
+
 }
 
-re = /^\w+$/;
-if(!re.test(username)) {
-    alert("Error: Username must contain only letters, numbers and underscores!");
-    document.getElementById('usernameid').focus();
-    return false;// checking for the username
-}
-if(password != "") {
-    if(password.length < 6) {
-    alert("Error: Password must contain at least six characters!");
-    document.getElementById('passwordid').focus();
-    return false;// checking for the length of the password
+function validateRegForm() {
+
+    // Initialising variable from register page
+    var regUserName = document.getElementById('inpRegName').value;
+    var userEmailID = document.getElementById('inpRegEmailID').value;
+    var regPwd = document.getElementById('inpRegPwd').value;
+    var regReentPwd = document.getElementById('inpRegConfirmPwd').value;
+
+    if ( (validateUsername(regUserName) == true) && (validateEmailID(userEmailID) == true) && (validatePwd(regPwd) == true) && (validateReenteredPwd(regPwd,regReentPwd) == true) ) {
+        return true;
+    } else {
+        return false;
     }
-    if(password == username) {
-    alert("Error: Password must be different from Username!");
-    document.getElementById('passwordid').focus();
-    return false;// checking for the inclusion of similar username
+
+}  // Fn validateRegForm
+
+function validateUsername(UserName) {
+
+    re = /^\w+$/;
+    if ( UserName == "" ) {
+        alert("Error: UserName cannot be blank!");
+        return false;  // Checking for the empty field
+    }  // IF-statement
+    if( !re.test(UserName) ) {
+        alert("Error: Username must contain only letters, numbers and underscore!");
+        return false;  // Checking for the login UserName
+    }   // IF-statement
+    return true;
+
+}  // Fn validateUsername
+
+function validateEmailID(emailID) {
+
+    if ( emailID == "" ) {
+        alert("Error: User Email id cannot be blank!");
+        return false;  // Checking for the empty field
+    } else {
+    return true;
+    }  // IF-statement
+    
+}  // Fn validateEmailID
+
+function validatePwd(pwd){
+
+    if( pwd != "" ) {
+        if( pwd.length < 6 ) {
+        alert("Error: Password must contain at least six characters!");
+        return false;
+        }
+        re = /[0-9]/;
+        if( !re.test(pwd) ) {
+        alert("Error: Password must contain at least one number (0-9)!");
+        return false;
+        }
+        re = /[a-z]/;
+        if( !re.test(pwd) ) {
+        alert("Error: Password must contain at least one lowercase letter (a-z)!");
+        return false;
+        }
+        re = /[A-Z]/;
+        if( !re.test(pwd) ) {
+        alert("Error: Password must contain at least one uppercase letter (A-Z)!");
+        return false;
+        }
+    } else {
+        alert("Error: Please check that you've entered your Password!");
+        return false;
     }
-    re = /[0-9]/;
-    if(!re.test(password)) {
-    alert("Error: password must contain at least one number (0-9)!");
-   document.getElementById('passwordid').focus();
-   return false;// checking for the inclusion of numbers
-    }
-    re = /[a-z]/;
-    if(!re.test(password)) {
-    alert("Error: password must contain at least one lowercase letter (a-z)!");
-    document.getElementById('passwordid').focus();
-    return false;// checking for inclusion of alphabets letters
-    }
-    re = /[A-Z]/;
-    if(!re.test(password)) {
-    alert("Error: password must contain at least one uppercase letter (A-Z)!");
-    document.getElementById('passwordid').focus();
-    return false;// checking for inclision of alphabets-caps letters
-    }
-} else {
-    alert("Error: Please check that you've entered your password!");
-    document.getElementById('passwordid').focus();
-    return false;
-}
-if(reenterpassword != ""){
-    if(password != reenterpassword){
-    alert("Error: Same password should be entered twice");
-    document.getElementById('reenterpasswordid').focus();
-    return false;// checking for the reentering of password
-    }
-}else{
-    alert("Error: Please check that you've re-entered your password!");
-    document.getElementById('reenterpasswordid').focus();
-    return false;// checking for the empty feild
-}
-return true;
-}
+    return true;
+
+}  // Fn validatePwd
+
+function validateReenteredPwd(regPwd,regReentPwd) {
+
+    if( regReentPwd != "" ) {
+        if(regPwd != regReentPwd) {
+        alert("Error: Login password and re-entered password should be same !!!");
+        return false;  // Checking for the reentering of loginPassword
+        }
+        return true;
+    } else { 
+        alert("Error: Please check that you've re-entered your Password!");
+        return false;  // Checking for the empty field
+    }  // IF-ELSE
+
+}  // Fn validateReenteredPwd
